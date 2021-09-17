@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Prod - Quem Conserta Pro - RELEASE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            // "args": [
+            //     // "--release",
+            //     "--flavor",
+            //     "quemconserta"
+            // ]
+        },
+    ]
+}
