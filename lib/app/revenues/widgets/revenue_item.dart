@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:tcc/models/revenue_model.dart';
+import 'package:tcc/core/models/revenue_model.dart';
 
 class RevenueItem extends StatelessWidget {
   final RevenueModel revenueItem;

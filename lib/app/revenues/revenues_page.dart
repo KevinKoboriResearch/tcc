@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/models/revenue_model.dart';
-import 'package:tcc/modules/revenues/widgets/revenue_item.dart';
-import 'package:tcc/providers/revenues_provider.dart';
-import 'package:tcc/modules/revenues/widgets/scroll_listener.dart';
+import 'package:tcc/core/models/revenue_model.dart';
+import 'package:tcc/app/revenues/widgets/revenue_item.dart';
+import 'package:tcc/core/providers/revenues_provider.dart';
+import 'package:tcc/app/revenues/widgets/scroll_listener.dart';
 
 // ignore: must_be_immutable
 class RevenuesPage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import "dart:core";
-import 'package:tcc/models/revenue_model.dart';
-import 'package:tcc/data/revenue_data.dart';
+import 'package:tcc/core/models/revenue_model.dart';
+import 'package:tcc/core/data/revenue_data.dart';
 
 class RevenuesState {
   final RevenueModel revenue1 = RevenueModel.fromMap(revenuesJson[0]);

@@ -1,4 +1,4 @@
-import "package:tcc/models/text_model.dart";
+import "package:tcc/core/models/text_model.dart";
 
 class RevenueModel {
   String id;

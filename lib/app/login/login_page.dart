@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/modules/app_shell/app_shell.dart';
-import 'package:tcc/modules/login/widgets/app_bar_custom_shape.dart';
-import 'package:tcc/modules/revenues/revenues_page.dart';
+import 'package:tcc/app/app_shell_page.dart';
+import 'package:tcc/app/login/widgets/app_bar_custom_shape.dart';
+import 'package:tcc/app/revenues/revenues_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);

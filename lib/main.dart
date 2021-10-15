@@ -1,10 +1,10 @@
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
-import 'package:tcc/modules/app_shell/app_shell.dart';
+import 'package:tcc/app/app_shell_page.dart';
 
-import 'modules/app_shell/app_shell.dart';
-import "modules/login/login_page.dart";
-import 'modules/revenues/revenues_page.dart';
+import 'app/app_shell_page.dart';
+import "app/login/login_page.dart";
+import 'app/revenues/revenues_page.dart';
 // import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
 void main() {

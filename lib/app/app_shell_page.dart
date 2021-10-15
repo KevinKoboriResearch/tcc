@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/modules/products/product_edit_page.dart';
-import 'package:tcc/modules/profile/profile_page.dart';
-import 'package:tcc/modules/revenues/revenues_page.dart';
+import 'package:tcc/app/products/edit_product/product_edit_page.dart';
+import 'package:tcc/app/products/products_page.dart';
+import 'package:tcc/app/profile/profile_page.dart';
+import 'package:tcc/app/revenues/revenues_page.dart';
 
 class AppShell extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _AppShellState extends State<AppShell> {
   final List<Widget> _telas = [
     // RevenuesPage(),
     // ProductsPage(),
-    ProductEditPage(),
+    ProductsPage(),
     ProductEditPage(),
     ProductEditPage(),
     ProductEditPage(),
