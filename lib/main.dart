@@ -1,4 +1,11 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
+import "package:flutter/services.dart";
+import 'package:tcc/modules/app_shell/app_shell.dart';
+
+import 'modules/app_shell/app_shell.dart';
+import "modules/login/login_page.dart";
+import 'modules/revenues/revenues_page.dart';
+// import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
 void main() {
   runApp(MyApp());
@@ -7,42 +14,56 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+    //
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: Colors.transparent,
+    //   statusBarBrightness: Brightness.dark,
+    //   statusBarIconBrightness: Brightness.dark,
+    //   systemNavigationBarIconBrightness: Brightness.light,
+    // ));
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: Colors.pink,
+    //   statusBarBrightness: Brightness.light,
+    //   statusBarIconBrightness: Brightness.light,
+    //   systemNavigationBarIconBrightness: Brightness.light,
+    //   // systemNavigationBarColor: Colors.green,
+    // ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      // systemNavigationBarColor: Colors.blue, // navigation bar color
+      statusBarColor: Colors.pink[300], // status bar color
+    ));
     return MaterialApp(
-      title: 'Doceria',
+      debugShowCheckedModeBanner: false,
+      title: "Yummy",
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        fontFamily: "Lato",
+        brightness: Brightness.dark,
+        canvasColor: Colors.white,
+        // splashColor: Colors.transparent,
+        // hoverColor: Colors.transparent,
+        // hintColor: Colors.transparent,
+        // focusColor: Colors.transparent,
+        // cardColor: Colors.white,
+        // backgroundColor: Colors.white,
+        // buttonColor: Colors.white,
+
+        // primarySwatch: Colors.blue,
+        // indicatorColor: Colors.white,
+        // errorColor: Colors.white,
+        // cursorColor: Colors.white,
+        // accentColor: Colors.white,
+        // shadowColor: Colors.white,
+        // dividerColor: Colors.white,
+        // primaryColor: Colors.white,
+        // disabledColor: Colors.white,
+        // highlightColor: Colors.white,
       ),
-      home: MyHomePage(title: 'Doceria'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Projeto Inicial',
-            ),
-          ],
-        ),
-      ),
+      // home: LoginPage(),
+      // home: RevenuesPage(),
+      home: AppShell(),
     );
   }
 }
