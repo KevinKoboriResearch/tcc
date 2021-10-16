@@ -42,7 +42,7 @@ final revenuesJson = [
   {
     "id": "product-2",
     "name": "PS5 Controller Black",
-    "title": "Cream Cake with Ice Cream",
+    "title": "Cream Cake with Ice Cream.",
     "price": 76.45,
     "desc": "description...",
     "subtitle": [
@@ -61,7 +61,7 @@ final revenuesJson = [
   {
     "id": "product-3",
     "name": "PS5 Controller White",
-    "title": "Strawberry Cake with Strawberries",
+    "title": "Strawberry Cake with Strawberries.",
     "price": 25.60,
     "desc": "description...",
     "subtitle": [

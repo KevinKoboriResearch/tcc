@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({ Key key }) : super(key: key);
+  const SettingsPage({Key key}) : super(key: key);
 
   @override
   _SettingsPageState createState() => _SettingsPageState();
@@ -10,8 +10,11 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      backgroundColor: Colors.pink[300],
+      body: Center(
+        child: Text('Config page'),
+      ),
     );
   }
 }

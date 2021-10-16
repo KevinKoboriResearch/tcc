@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/app/app_shell_page.dart';
-import 'package:tcc/app/login/widgets/app_bar_custom_shape.dart';
-import 'package:tcc/app/revenues/revenues_page.dart';
+import 'package:tcc/modules/app_shell/app_shell_page.dart';
+import 'package:tcc/modules/login/widgets/app_bar_custom_shape.dart';
+import 'package:tcc/modules/revenues/revenues_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -61,8 +61,6 @@ class LoginPage extends StatelessWidget {
                             fontSize: 16,
                             color: Colors.white,
                           ),
-                          // labelText: 'Enter your username',
-                          // labelStyle: TextStyle(color: Colors.red),s
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.pink[100],
@@ -84,8 +82,6 @@ class LoginPage extends StatelessWidget {
                             fontSize: 16,
                             color: Colors.white,
                           ),
-                          // labelText: 'Enter your username',
-                          // labelStyle: TextStyle(color: Colors.red),s
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.pink[100],
@@ -152,7 +148,7 @@ class LoginPage extends StatelessWidget {
                                 MaterialStateProperty.all(Colors.transparent),
                           ),
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => AppShell(),
