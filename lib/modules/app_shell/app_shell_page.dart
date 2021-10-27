@@ -16,9 +16,9 @@ class AppShell extends StatefulWidget {
 }
 
 class _AppShellState extends State<AppShell> {
-  bool login = false;
-  int _indiceAtual = 0;
-  final List<Widget> _telas = [
+  // bool login = false;
+  int _screenIndex = 0;
+  final List<Widget> _screens = [
     // RevenuesPage(),
     // ProductsPage(),
     HomePage(),
@@ -36,7 +36,7 @@ class _AppShellState extends State<AppShell> {
     return Scaffold(
       backgroundColor: Colors.pink,
       // appBar: AppBar(backgroundColor: Colors.pink[300],),
-      body: Center(child: _telas[_indiceAtual]),
+      body: Center(child: _screens[_screenIndex]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         // iconSize: 18,
@@ -44,7 +44,7 @@ class _AppShellState extends State<AppShell> {
         // fixedColor: Colors.white,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey[800],
-        currentIndex: _indiceAtual,
+        currentIndex: _screenIndex,
         onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
@@ -53,11 +53,11 @@ class _AppShellState extends State<AppShell> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.menu_book_rounded),
             label: "Revenues",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket),
+            icon: Icon(Icons.shopping_cart_rounded),
             label: "Products",
           ),
           BottomNavigationBarItem(
@@ -75,7 +75,7 @@ class _AppShellState extends State<AppShell> {
 
   void onTabTapped(int index) {
     setState(() {
-      _indiceAtual = index;
+      _screenIndex = index;
     });
   }
 }

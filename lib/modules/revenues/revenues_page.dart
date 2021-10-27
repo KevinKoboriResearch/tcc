@@ -47,7 +47,7 @@ class _RevenuesPageState extends State<RevenuesPage> {
                 right: 0,
                 top: widget._model.bottom,
                 child: YummyAppBarWidget(
-                  tittle: 'Revenues',
+                  tittle: widget._model.bottom == 0 ? 'Revenues' : '',
                   backArrow: false,
                 ),
               ),

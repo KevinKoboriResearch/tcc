@@ -32,8 +32,7 @@ class MyApp extends StatelessWidget {
     //   // systemNavigationBarColor: Colors.green,
     // ));
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      // systemNavigationBarColor: Colors.blue, // navigation bar color
-      statusBarColor: Colors.pink[300], // status bar color
+      statusBarColor: Colors.transparent,
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,

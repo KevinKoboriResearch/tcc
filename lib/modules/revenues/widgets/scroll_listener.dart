@@ -4,7 +4,7 @@ class ScrollListener extends ChangeNotifier {
   double bottom = 0;
   double _last = 0;
 
-  ScrollListener.initialise(ScrollController controller, [double height = 56]) {
+  ScrollListener.initialise(ScrollController controller, [double height = 48]) {
     controller.addListener(() {
       final current = controller.offset;
       bottom += _last - current;

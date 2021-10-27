@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class LoginShapeBorder extends CustomPainter {
+class LoginCustomShape extends CustomPainter {
   final double curveHeight;
 
-  const LoginShapeBorder(this.curveHeight);
+  const LoginCustomShape(this.curveHeight);
 
   @override
   void paint(Canvas canvas, Size size) {
