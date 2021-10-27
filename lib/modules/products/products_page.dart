@@ -4,7 +4,7 @@ import 'package:tcc/core/models/receipts_model.dart';
 import 'package:tcc/core/providers/receipts_provider.dart';
 import 'package:tcc/core/widgets/yummy_app_bar_widget.dart';
 import 'package:tcc/core/widgets/yummy_bottom_search_app_bar_widget.dart';
-import 'package:tcc/modules/receipts/widgets/receipts_item.dart';
+import 'package:tcc/modules/receipts/widgets/receipt_item.dart';
 import 'package:tcc/modules/receipts/widgets/scroll_listener.dart';
 
 import 'widgets/product_item.dart';
