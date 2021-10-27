@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/core/models/revenue_model.dart';
-// import 'package:tcc/app/revenues/widgets/revenue_item.dart';
-import 'package:tcc/core/providers/revenues_provider.dart';
+import 'package:tcc/core/models/receipts_model.dart';
+// import 'package:tcc/app/receipts/widgets/receipt_item.dart';
+import 'package:tcc/core/providers/receipts_provider.dart';
 import 'package:tcc/core/widgets/yummy_app_bar_widget.dart';
 import 'package:tcc/core/widgets/yummy_bottom_search_app_bar_widget.dart';
-import 'package:tcc/modules/revenues/widgets/revenue_item.dart';
-import 'package:tcc/modules/revenues/widgets/scroll_listener.dart';
+import 'package:tcc/modules/receipts/widgets/receipts_item.dart';
+import 'package:tcc/modules/receipts/widgets/scroll_listener.dart';
 
 import 'widgets/product_item.dart';
 
@@ -23,7 +23,7 @@ class ProductsPage extends StatefulWidget {
 }
 
 class _ProductsPageState extends State<ProductsPage> {
-  List<RevenueModel> revenuesList = RevenuesState().categoryPS5Controls;
+  List<ReceiptModel> receiptsList = ReceiptsState().categoryPS5Controls;
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +36,13 @@ class _ProductsPageState extends State<ProductsPage> {
             children: [
               ListView.builder(
                 controller: widget._controller,
-                itemCount: revenuesList.length,
+                itemCount: receiptsList.length,
                 itemBuilder: (_, index) => index == 0
                     ? Padding(
                         padding: const EdgeInsets.only(top: 52.0),
-                        child: ProductItem(revenueItem: revenuesList[index]),
+                        child: ProductItem(receiptItem: receiptsList[index]),
                       )
-                    : ProductItem(revenueItem: revenuesList[index]),
+                    : ProductItem(receiptItem: receiptsList[index]),
               ),
               Positioned(
                 left: 0,

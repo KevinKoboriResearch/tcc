@@ -5,9 +5,9 @@
 // import "package:flutter_svg/flutter_svg.dart";
 // import "package:flutter_neumorphic/flutter_neumorphic.dart";
 // // import "package:visibility_detector/visibility_detector.dart";
-// import 'package:tcc/models/revenue_model.dart';
+// import 'package:tcc/models/receipt_model.dart';
 // import "package:tcc/utils/consts.dart";
-// import 'package:tcc/providers/revenues_provider.dart';
+// import 'package:tcc/providers/receipts_provider.dart';
 
 // class ProfilePage extends StatefulWidget {
 //   @override
@@ -15,7 +15,7 @@
 // }
 
 // class _ProfilePageState extends State<ProfilePage> {
-//   List<RevenueModel> revenuesList = RevenuesState().categoryPS5Controls;
+//   List<ReceiptModel> receiptsList = receiptsState().categoryPS5Controls;
 //   // int indexPage = 0;
 //   // int indexType = 0;
 //   // int isCurrentItem = 0;
@@ -45,7 +45,7 @@
 //                   height: 200,
 //                 );
 //               },
-//               childCount: revenuesList.length,
+//               childCount: receiptsList.length,
 //             ),
 //           ),
 //           SliverToBoxAdapter(
@@ -67,7 +67,7 @@
 //       //   child: Align(
 //       //     alignment: Alignment.topCenter,
 //       //     child: Text(
-//       //       'Revenues',
+//       //       'receipts',
 //       //       style: TextStyle(
 //       //         fontSize: 18,
 //       //         fontWeight: FontWeight.bold,

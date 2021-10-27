@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:tcc/core/models/revenue_model.dart';
+import 'package:tcc/core/models/receipts_model.dart';
 
 class ProductItem extends StatelessWidget {
-  final RevenueModel revenueItem;
+  final ReceiptModel receiptItem;
   const ProductItem({
     Key key,
-    @required this.revenueItem,
+    @required this.receiptItem,
   }) : super(key: key);
 
   @override
@@ -25,7 +25,7 @@ class ProductItem extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .8,
                   child: Text(
-                    revenueItem.title,
+                    receiptItem.title,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       color: Colors.grey[800],
@@ -65,7 +65,7 @@ class ProductItem extends StatelessWidget {
           //   child: ClipRRect(
           //     borderRadius: BorderRadius.circular(20.0),
           //     child: Image.network(
-          //       revenueItem.image,
+          //       receiptItem.image,
           //       // "https://images-gmi-pmc.edge-generalmills.com/4f4dbcfc-ff16-4083-a597-aa103c1ce364.jpg",
           //       fit: BoxFit.cover,
           //     ),

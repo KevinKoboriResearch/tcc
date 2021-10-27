@@ -4,7 +4,7 @@ import 'package:tcc/modules/app_shell/app_shell_page.dart';
 
 import 'modules/app_shell/app_shell_page.dart';
 import "modules/login/login_page.dart";
-import 'modules/revenues/revenues_page.dart';
+import 'modules/receipts/receipts_page.dart';
 // import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
 void main() {

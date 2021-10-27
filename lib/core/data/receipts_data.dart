@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-final revenuesJson = [
+final receiptsJson = [
   {
     "id": "product-0",
     "name": "",

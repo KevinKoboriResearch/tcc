@@ -3,10 +3,10 @@ import 'package:tcc/modules/home/home_page.dart';
 // import 'package:tcc/modules/products/product/edit_product/product_edit_page.dart';
 import 'package:tcc/modules/products/products_page.dart';
 import 'package:tcc/modules/profile/profile_page.dart';
-import 'package:tcc/modules/revenues/revenues_page.dart';
+import 'package:tcc/modules/receipts/receipts_page.dart';
 import 'package:tcc/modules/settings/settings_page.dart';
 // import 'package:tcc/modules/profile/profile_page.dart';
-// import 'package:tcc/modules/revenues/revenues_page.dart';
+// import 'package:tcc/modules/receipts/receipts_page.dart';
 
 // import '../login/login_page.dart';
 
@@ -19,10 +19,10 @@ class _AppShellState extends State<AppShell> {
   // bool login = false;
   int _screenIndex = 0;
   final List<Widget> _screens = [
-    // RevenuesPage(),
+    // ReceiptsPage(),
     // ProductsPage(),
     HomePage(),
-    RevenuesPage(),
+    ReceiptsPage(),
     ProductsPage(),
     SettingsPage(),
     ProfilePage(),
@@ -54,7 +54,7 @@ class _AppShellState extends State<AppShell> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.menu_book_rounded),
-            label: "Revenues",
+            label: "Receipts",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_rounded),

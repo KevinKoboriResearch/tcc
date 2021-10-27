@@ -24,26 +24,27 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Stack(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(height: 32),
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/logos/yummy_logo.png',
-                          height: MediaQuery.of(context).size.height * 0.2,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.width * 0.7,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 32),
+                      Image.asset(
+                        'assets/logos/yummy_logo.png',
+                        height: MediaQuery.of(context).size.height * 0.14,
+                      ),
+                      Text(
+                        'Yummy',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 36,
                         ),
-                        Text(
-                          'Yummy',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 48,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -105,7 +106,8 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 32),
-                    MediaQuery.of(context).viewInsets.bottom == false ? Container() : Container(
+                    // MediaQuery.of(context).viewInsets.bottom == false ? Container() :
+                    Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
                         boxShadow: [

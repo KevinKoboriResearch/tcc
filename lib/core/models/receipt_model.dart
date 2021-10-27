@@ -1,6 +1,6 @@
 import "package:tcc/core/models/text_model.dart";
 
-class RevenueModel {
+class ReceiptModel {
   String id;
   String name;
   String title;
@@ -11,7 +11,7 @@ class RevenueModel {
   String release;
   String image;
 
-  RevenueModel({
+  ReceiptModel({
     this.id,
     this.name,
     this.title,
@@ -23,7 +23,7 @@ class RevenueModel {
     this.image,
   });
 
-  RevenueModel.fromMap(Map<String, dynamic> map) {
+  ReceiptModel.fromMap(Map<String, dynamic> map) {
     id = map["id"] as String;
     name = map["name"] as String;
     title = map["title"] as String;
