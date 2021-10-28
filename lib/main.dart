@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 import 'package:tcc/modules/app_shell/app_shell_page.dart';
@@ -7,7 +8,9 @@ import "modules/login/login_page.dart";
 import 'modules/receipts/receipts_page.dart';
 // import "package:flutter_neumorphic/flutter_neumorphic.dart";
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -34,34 +37,42 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Yummy",
-      theme: ThemeData(
-        fontFamily: "Lato",
-        brightness: Brightness.dark,
-        canvasColor: Colors.white,
-        // splashColor: Colors.transparent,
-        // hoverColor: Colors.transparent,
-        // hintColor: Colors.transparent,
-        // focusColor: Colors.transparent,
-        // cardColor: Colors.white,
-        // backgroundColor: Colors.white,
-        // buttonColor: Colors.white,
 
-        // primarySwatch: Colors.blue,
-        // indicatorColor: Colors.white,
-        // errorColor: Colors.white,
-        // cursorColor: Colors.white,
-        // accentColor: Colors.white,
-        // shadowColor: Colors.white,
-        // dividerColor: Colors.white,
-        // primaryColor: Colors.white,
-        // disabledColor: Colors.white,
-        // highlightColor: Colors.white,
-      ),
-      home: LoginPage(),
-      // home: AppShell(),
+    final Future<FirebaseApp> _init = Firebase.initializeApp();
+
+    return FutureBuilder(
+      future: _init,
+      builder: (ctx, appSnapshot) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: "Yummy",
+          theme: ThemeData(
+            fontFamily: "Lato",
+            brightness: Brightness.dark,
+            canvasColor: Colors.white,
+            // splashColor: Colors.transparent,
+            // hoverColor: Colors.transparent,
+            // hintColor: Colors.transparent,
+            // focusColor: Colors.transparent,
+            // cardColor: Colors.white,
+            // backgroundColor: Colors.white,
+            // buttonColor: Colors.white,
+
+            // primarySwatch: Colors.blue,
+            // indicatorColor: Colors.white,
+            // errorColor: Colors.white,
+            // cursorColor: Colors.white,
+            // accentColor: Colors.white,
+            // shadowColor: Colors.white,
+            // dividerColor: Colors.white,
+            // primaryColor: Colors.white,
+            // disabledColor: Colors.white,
+            // highlightColor: Colors.white,
+          ),
+          home: LoginPage(),
+          // home: AppShell(),
+        );
+      },
     );
   }
 }

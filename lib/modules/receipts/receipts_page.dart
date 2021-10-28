@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/core/models/receipts_model.dart';
+import 'package:tcc/core/models/receipt_model.dart';
 // import 'package:tcc/app/receipts/widgets/receipts_item.dart';
 import 'package:tcc/core/providers/receipts_provider.dart';
 import 'package:tcc/core/widgets/yummy_app_bar_widget.dart';

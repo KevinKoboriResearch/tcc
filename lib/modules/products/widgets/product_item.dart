@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:tcc/core/models/receipts_model.dart';
+import 'package:tcc/core/models/receipt_model.dart';
 
 class ProductItem extends StatelessWidget {
   final ReceiptModel receiptItem;

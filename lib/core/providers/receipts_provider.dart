@@ -1,5 +1,5 @@
 import "dart:core";
-import 'package:tcc/core/models/receipts_model.dart';
+import 'package:tcc/core/models/receipt_model.dart';
 import 'package:tcc/core/data/receipts_data.dart';
 
 class ReceiptsState {

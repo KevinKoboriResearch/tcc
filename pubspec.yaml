@@ -33,6 +33,13 @@ dependencies:
   # flutter_svg: ^0.21.0+1
   visibility_detector: ^0.1.5
 
+  another_flushbar: ^1.10.17
+
+  firebase_core: ^1.0.3 #Recursos básicos
+  cloud_firestore: ^1.0.5 #banco de dados
+  firebase_storage: ^8.0.3 #armazenamento arquivos
+  firebase_auth: ^1.1.0 #autenticacao
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
