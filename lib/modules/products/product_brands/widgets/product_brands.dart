@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:tcc/core/models/receipts_model.dart';
+import 'package:tcc/core/models/product_model.dart';
+import 'package:tcc/core/utils/consts.dart';
 
-class ProductItem extends StatelessWidget {
-  final ReceiptModel receiptItem;
-  const ProductItem({
+class ProductsBrandsItem extends StatelessWidget {
+  final ProductModel productItem;
+  const ProductsBrandsItem({
     Key key,
-    @required this.receiptItem,
+    @required this.productItem,
   }) : super(key: key);
 
   @override
@@ -19,32 +20,42 @@ class ProductItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(16, 32, 32, 0),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * .8,
-                  child: Text(
-                    receiptItem.title,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: Colors.grey[800],
-                      // color: Colors.grey[600],
-                      fontFamily: 'Comfortaa',
-                      fontSize: 16,
+            padding: const EdgeInsets.fromLTRB(16, 12, 8, 12),
+            child: InkWell(
+              onTap: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (_) => ProductBrands(),
+                //   ),
+                // );
+              },
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .8,
+                    child: Text(
+                      productItem.title,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.grey[800],
+                        // color: Colors.grey[600],
+                        fontFamily: 'Comfortaa',
+                        fontSize: 16,
+                      ),
                     ),
                   ),
-                ),
-                Spacer(),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.pink[300],
-                ),
-              ],
+                  Spacer(),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: AppColors.azulClaro,
+                  ),
+                ],
+              ),
             ),
           ),
           // Divider(
-          //   color: Colors.pink[300],
+          //   color: AppColors.azulClaro,
           //   endIndent: 32,
           //   height: 8,
           //   thickness: 1,
@@ -65,7 +76,7 @@ class ProductItem extends StatelessWidget {
           //   child: ClipRRect(
           //     borderRadius: BorderRadius.circular(20.0),
           //     child: Image.network(
-          //       receiptItem.image,
+          //       productItem.image,
           //       // "https://images-gmi-pmc.edge-generalmills.com/4f4dbcfc-ff16-4083-a597-aa103c1ce364.jpg",
           //       fit: BoxFit.cover,
           //     ),

@@ -15,7 +15,7 @@
 // }
 
 // class _ProfilePageState extends State<ProfilePage> {
-//   List<ReceiptModel> receiptsList = receiptsState().categoryPS5Controls;
+//   List<ReceiptModel> receiptsList = receiptsState().getReceipts;
 //   // int indexPage = 0;
 //   // int indexType = 0;
 //   // int isCurrentItem = 0;
@@ -28,12 +28,12 @@
 //           SliverAppBar(
 //             // toolbarHeight: 48,
 //             expandedHeight: 200,
-//             backgroundColor: Colors.pink[300].withOpacity(0.8),
+//             backgroundColor: AppColors.azulClaro.withOpacity(0.8),
 //             floating: true,
 //             leading: Container(),
 //             flexibleSpace: Container(
 //               height: 224,
-//               color: Colors.pink[300],
+//               color: AppColors.azulClaro,
 //               // child: ,
 //             ),
 //           ),
@@ -58,12 +58,12 @@
 //       // Container(
 //       //   padding: EdgeInsets.all(8),
 //       //   height: 38,
-//       //   color: Colors.pink[300].withOpacity(0.7),
+//       //   color: AppColors.azulClaro.withOpacity(0.7),
 //       // ),
 //       // bottomNavigationBar: Container(
 //       //   padding: EdgeInsets.all(8),
 //       //   height: 60,
-//       //   color: Colors.pink[300].withOpacity(0.5),
+//       //   color: AppColors.azulClaro.withOpacity(0.5),
 //       //   child: Align(
 //       //     alignment: Alignment.topCenter,
 //       //     child: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:tcc/core/models/receipts_model.dart';
+import 'package:tcc/core/models/receipt_model.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class ReceiptItem extends StatelessWidget {
   final ReceiptModel receiptItem;
@@ -23,7 +24,7 @@ class ReceiptItem extends StatelessWidget {
             child: Text(
               receiptItem.title,
               style: TextStyle(
-                color: Colors.pink[300],
+                color: AppColors.azulClaro,
                 // color: Colors.grey[600],
                 fontFamily: 'Comfortaa',
                 fontSize: 34,

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class YummyAppBarWidget extends StatelessWidget {
   final String tittle;
   final bool backArrow;
+  final List<Widget> actions;
   const YummyAppBarWidget({
     Key key,
     @required this.tittle,
-    @required this.backArrow,
+    this.backArrow = false,
+    this.actions,
   }) : super(key: key);
 
   @override
@@ -14,8 +17,9 @@ class YummyAppBarWidget extends StatelessWidget {
     return AppBar(
       elevation: 0,
       toolbarHeight: 48,
-      backgroundColor: Colors.pink[300].withOpacity(0.9),
+      backgroundColor: AppColors.azulClaro.withOpacity(0.9),
       leading: backArrow ? Icon(Icons.arrow_back_ios) : null,
+      actions: actions,
       titleSpacing: 0,
       centerTitle: true,
       title: Text(

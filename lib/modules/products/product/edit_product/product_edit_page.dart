@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class ProductEditPage extends StatefulWidget {
   const ProductEditPage({Key key}) : super(key: key);
@@ -31,7 +32,7 @@ class _ProductEditPageState extends State<ProductEditPage> {
             TextField(
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.pink[300].withOpacity(0.9),
+                fillColor: AppColors.azulClaro.withOpacity(0.9),
                 contentPadding: EdgeInsets.fromLTRB(16, 0, 16, 0),
                 suffixIcon: Icon(Icons.search),
                 hintText: "Search",
@@ -72,7 +73,7 @@ class _ProductEditPageState extends State<ProductEditPage> {
             TextField(
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.pink[300].withOpacity(0.9),
+                fillColor: AppColors.azulClaro.withOpacity(0.9),
                 contentPadding: EdgeInsets.fromLTRB(16, 0, 16, 0),
                 suffixIcon: Icon(Icons.search),
                 hintText: "Search",
@@ -113,7 +114,7 @@ class _ProductEditPageState extends State<ProductEditPage> {
             TextField(
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.pink[300].withOpacity(0.9),
+                fillColor: AppColors.azulClaro.withOpacity(0.9),
                 contentPadding: EdgeInsets.fromLTRB(16, 0, 16, 0),
                 suffixIcon: Icon(Icons.search),
                 hintText: "Search",

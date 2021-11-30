@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class LoginCustomShape extends CustomPainter {
   final double curveHeight;
@@ -8,18 +9,18 @@ class LoginCustomShape extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.pink[300]
+      ..color = AppColors.azulClaro
       ..strokeWidth = 0.0;
 
     var path = Path()
       ..lineTo(0, curveHeight + 80)
-      ..quadraticBezierTo(size.width/4, 360, size.width, curveHeight)
-       ..lineTo(200, curveHeight + 40)
-      ..quadraticBezierTo(size.width/2, 320, size.width, curveHeight)
+      ..quadraticBezierTo(size.width / 4, 360, size.width, curveHeight)
+      ..lineTo(200, curveHeight + 40)
+      ..quadraticBezierTo(size.width / 2, 320, size.width, curveHeight)
       ..lineTo(size.width, 0)
       ..close();
 
-    canvas.drawShadow(path, Colors.pink.withOpacity(0.3), 6.0, false);
+    canvas.drawShadow(path, AppColors.azulClaro.withOpacity(0.3), 6.0, false);
     canvas.drawPath(path, paint);
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 import 'package:tcc/modules/app_shell/app_shell_page.dart';
 import 'package:tcc/modules/login/widgets/login_custom_shape.dart';
 
@@ -7,6 +8,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -14,8 +16,8 @@ class LoginPage extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.white,
-            Colors.pink[300],
+            AppColors.branco,
+            AppColors.azulClaro,
           ],
         )),
         child: CustomPaint(
@@ -41,6 +43,7 @@ class LoginPage extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 36,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
@@ -51,125 +54,127 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Spacer(flex: 3),
                     TextField(
+                      style: TextStyle(color: AppColors.grafite),
                       decoration: InputDecoration(
                         hintText: "E-mail",
                         hintStyle: TextStyle(
                           fontSize: 16,
-                          color: Colors.white,
+                          color: AppColors.grafite,
                         ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.pink[100],
+                            color: AppColors.grafite,
                             width: 2,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.white,
+                            color: AppColors.grafite,
                             width: 2,
                           ),
                         ),
                       ),
                     ),
                     TextField(
+                      style: TextStyle(color: AppColors.grafite),
                       decoration: InputDecoration(
-                        hintText: "Password",
+                        hintText: "Senha",
                         hintStyle: TextStyle(
                           fontSize: 16,
-                          color: Colors.white,
+                          color: AppColors.grafite,
                         ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.pink[100],
+                            color: AppColors.grafite,
                             width: 2,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.white,
+                            color: AppColors.grafite,
                             width: 2,
                           ),
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
+                    if (!isKeyboard)
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Esqueceu a Senha?',
+                            style: TextStyle(
+                              color: AppColors.grafite,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
-                    ),
                     SizedBox(height: 32),
                     // MediaQuery.of(context).viewInsets.bottom == false ? Container() :
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            offset: Offset(0, 4),
-                            blurRadius: 5.0,
-                          )
-                        ],
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          stops: [0.0, 1.0],
-                          colors: [
-                            Colors.pink[200],
-                            Colors.pink[300],
+                    if (!isKeyboard)
+                      Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              offset: Offset(0, 4),
+                              blurRadius: 5.0,
+                            )
                           ],
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            stops: [0.0, 1.0],
+                            colors: [
+                              AppColors.rosaMuitoClaro,
+                              AppColors.rosaClaro,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                        color: Colors.deepPurple.shade300,
-                        borderRadius: BorderRadius.circular(20),
+                        child: ElevatedButton(
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                            ),
+                            // minimumSize: MaterialStateProperty.all(Size(600, 50)),
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.transparent),
+                            // elevation: MaterialStateProperty.all(3),
+                            shadowColor:
+                                MaterialStateProperty.all(Colors.transparent),
+                          ),
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AppShell(),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              top: 10,
+                              bottom: 10,
+                            ),
+                            child: Text(
+                              'ENTRAR',
+                              style: TextStyle(
+                                fontSize: 18,
+                                // fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                      child: ElevatedButton(
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
-                          // minimumSize: MaterialStateProperty.all(Size(600, 50)),
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.transparent),
-                          // elevation: MaterialStateProperty.all(3),
-                          shadowColor:
-                              MaterialStateProperty.all(Colors.transparent),
-                        ),
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AppShell(),
-                            ),
-                          );
-                          // onpressed();
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            top: 10,
-                            bottom: 10,
-                          ),
-                          child: Text(
-                            'LOGIN',
-                            style: TextStyle(
-                              fontSize: 18,
-                              // fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Spacer(flex: 1),
+                    if (!isKeyboard) Spacer(flex: 1),
                   ],
                 ),
               ],

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 import 'package:tcc/modules/home/home_page.dart';
 // import 'package:tcc/modules/products/product/edit_product/product_edit_page.dart';
-import 'package:tcc/modules/products/products_page.dart';
+import 'package:tcc/modules/products/products_list_page.dart';
 import 'package:tcc/modules/profile/profile_page.dart';
 import 'package:tcc/modules/receipts/receipts_page.dart';
 import 'package:tcc/modules/settings/settings_page.dart';
@@ -35,12 +36,12 @@ class _AppShellState extends State<AppShell> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pink,
-      // appBar: AppBar(backgroundColor: Colors.pink[300],),
+      // appBar: AppBar(backgroundColor: AppColors.azulClaro,),
       body: Center(child: _screens[_screenIndex]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         // iconSize: 18,
-        backgroundColor: Colors.pink[300],
+        backgroundColor: AppColors.azulClaro,
         // fixedColor: Colors.white,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey[800],
@@ -48,7 +49,7 @@ class _AppShellState extends State<AppShell> {
         onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
-            // backgroundColor:  Colors.pink[300],
+            // backgroundColor:  AppColors.azulClaro,
             icon: Icon(Icons.home),
             label: "Home",
           ),

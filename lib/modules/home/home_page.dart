@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             expandedHeight: 180,
             floating: false,
             pinned: true,
-            backgroundColor: Colors.pink[300],
+            backgroundColor: AppColors.azulClaro,
             flexibleSpace: FlexibleSpaceBar(
               titlePadding: EdgeInsets.fromLTRB(16, 0, 16, 16),
               background: Stack(
@@ -43,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Container(
                           height: 228,
-                          color: Colors.pink[300].withOpacity(0.4),
+                          color: AppColors.rosaClaro.withOpacity(0.8),
                         ),
                       ),
                     ),
@@ -53,12 +54,14 @@ class _HomePageState extends State<HomePage> {
               title: Row(
                 children: [
                   Icon(Icons.ac_unit),
+                  
                   SizedBox(width: 8),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
                       'Kevin Yuji Kobori Kobori',
                       overflow: TextOverflow.ellipsis,
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ],
@@ -177,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
                   padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
                   decoration: BoxDecoration(
-                    color: Colors.pink[300],
+                    color: AppColors.rosaClaro,
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                   ),
                   child: Column(
@@ -197,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
                   padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
                   decoration: BoxDecoration(
-                    color: Colors.pink[300],
+                    color: AppColors.rosaClaro,
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                   ),
                   child: Column(
@@ -217,7 +220,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
                   padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
                   decoration: BoxDecoration(
-                    color: Colors.pink[300],
+                    color: AppColors.rosaClaro,
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                   ),
                   child: Column(
@@ -237,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
                   padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
                   decoration: BoxDecoration(
-                    color: Colors.pink[300],
+                    color: AppColors.rosaClaro,
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                   ),
                   child: Column(

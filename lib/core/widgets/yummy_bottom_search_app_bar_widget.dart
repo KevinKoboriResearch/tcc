@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcc/core/utils/consts.dart';
 
 class YummyBottomSearchAppBarWidget extends StatelessWidget {
   const YummyBottomSearchAppBarWidget({
@@ -13,10 +14,10 @@ class YummyBottomSearchAppBarWidget extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           filled: true,
-          fillColor: Colors.pink[300].withOpacity(0.9),
+          fillColor: AppColors.rosaClaro.withOpacity(0.9),
           contentPadding: EdgeInsets.fromLTRB(16, 0, 16, 0),
           suffixIcon: Icon(Icons.search),
-          hintText: "Search",
+          hintText: "Pesquisar",
           hintStyle: TextStyle(
             fontSize: 16,
             color: Colors.white.withOpacity(0.7),
@@ -24,7 +25,7 @@ class YummyBottomSearchAppBarWidget extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16.0),
             borderSide: BorderSide(
-              color: Colors.pink[100],
+              color: AppColors.rosaExtraClaro,
               width: 2,
             ),
           ),
